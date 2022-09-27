@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: lightgray;
+}
+.container .split {
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.container .split.left {
+  left: 0;
+  background-image: url(https://images.unsplash.com/photo-1527416876370-fb74d128c3dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+.container .split.left::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 248, 220, 0.6);
+}
+.container .split.left .btn:hover {
+  background-color: cornsilk;
+  border-color: cornsilk;
+  color: black;
+}
+.container .split.right {
+  right: 0;
+  background-image: url(https://images.unsplash.com/photo-1646026907993-0df9003380a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+.container .split.right .btn:hover {
+  background-color: darksalmon;
+  border-color: darksalmon;
+  color: black;
+}
+.container .split.right::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(233, 150, 122, 0.6);
+}
+.container .split h2 {
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.container .split .btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: white;
+  border: white solid 0.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 15rem;
+  padding: 1.5rem;
+}
+
+.split.left, .split.right, .split.left::before, .split.right::before {
+  transition: all 1s ease-in-out;
+}
+
+.hover-right .right {
+  width: 75%;
+}
+.hover-right .left {
+  width: 25%;
+}
+
+.hover-left .left {
+  width: 75%;
+}
+.hover-left .right {
+  width: 25%;
+}
+
+/*# sourceMappingURL=style.css.map */
